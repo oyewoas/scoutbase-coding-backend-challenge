@@ -16,7 +16,7 @@ const directors = (sequelize, DataTypes) => {
       }
     });
     Directors.associate = (models) => {
-        Directors.BelongsToMany(models.Actors, { through: 'actors_directors' });
+        Directors.belongsToMany(models.Actors, { through: 'actors_directors' });
     };
       return Directors;
   };

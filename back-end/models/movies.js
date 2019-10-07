@@ -16,7 +16,7 @@ const movies = (sequelize, DataTypes) => {
       }
     });
     Movies.associate = (models) => {
-        Movies.BelongsToMany(models.Actors, { through: 'movies_actors' });
+        Movies.belongsToMany(models.Actors, { through: 'movies_actors' });
     };
     return Movies;
   };
