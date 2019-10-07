@@ -1,0 +1,46 @@
+{
+  "name": "scoutbase-backend-challenge",
+  "version": "1.0.0",
+  "description": "Scoutbase backend challeng NodeJs and GraphQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./back-end/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oyewoas/scoutbase-coding-challenge.git"
+  },
+  "author": "Ayooluwa Oyewo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oyewoas/scoutbase-coding-challenge/issues"
+  },
+  "homepage": "https://github.com/oyewoas/scoutbase-coding-challenge#readme",
+  "keywords": [],
+  "dependencies": {
+    "apollo-server-express": "^2.9.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "graphql": "^14.5.8",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.19.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/node": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "nodemon": "^1.19.3",
+    "sequelize-cli": "^5.5.1"
+  }
+}
