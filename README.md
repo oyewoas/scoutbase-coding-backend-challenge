@@ -1,6 +1,138 @@
 [![Build Status](https://travis-ci.com/oyewoas/scoutbase-coding-backend-challenge.svg?token=UhTLyPmC4FJFTsy9LJJ1&branch=develop)](https://travis-ci.com/oyewoas/scoutbase-coding-backend-challenge)
 [![Maintainability](https://api.codeclimate.com/v1/badges/eec3cfdc2df501237031/maintainability)](https://codeclimate.com/github/oyewoas/scoutbase-coding-backend-challenge/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/eec3cfdc2df501237031/test_coverage)](https://codeclimate.com/github/oyewoas/scoutbase-coding-backend-challenge/test_coverage)
+## Table of Contents (Optional)
+
+- [Usage](#usage)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Prerequisites](#prerequisites)
+- [Settings](#settings)
+
+
+## Usage
+
+### Developers
+- For developers seeking to use it as a backend infrastructure use this url https://movies-graphql-api.herokuapp.com/graphql and then follow the description in [Usage](#usage) below to get started on how to implement the api endpoints in your app.    
+
+## Features
+   Access the Base URL above
+
+- Use the following Mutations
+
+  ```javascript
+    mutation {
+        login(username: "name", password: "password") {
+          token
+          user {
+            id
+            name
+          }
+        }
+    }
+  ```
+
+
+  ```javascript
+  mutation {
+    createUser(username: "yourname", password: "yourpassword") {
+          token
+          user {
+            id
+            name
+          }
+        }
+    }
+  ```
+
+
+- Use the following Query
+
+  Public query:
+  ```javascript
+    query{
+        movies{
+          title
+          year
+          rating
+          actors {
+            name
+            birthday
+            country
+            directors {
+              name
+              birthday
+              country
+            }
+          }
+        }
+      }
+  ```
+
+  Authenticated User:
+
+  HTTP HEADERS = { token : '' }
+  token is received upon logging in
+
+  ```javascript
+    query{
+        movies{
+          scoutbase_rating
+          title
+          year
+          rating
+          actors {
+            name
+            birthday
+            country
+            directors {
+              name
+              birthday
+              country
+            }
+          }
+        }
+      }
+  ```
+
+## Contributing
+    I would love to hear from anyone that will like to contribute
+
+## Prerequisites
+- NodeJs and Npm (https://nodejs.org/en/download/)
+
+- PostgreSQL(https://www.postgresql.org/download/)
+
+- Create a .env file at the project root `scoutbase-coding-backend-challenge/.env` see `.env-example` file to know what to add to `.env` in your root folder.
+
+- DBeaver: DBeaver is free and open source universal database tool for developers and database administrators.
+  (https://dbeaver.io/download/), this is optional though, you can use any other GUI for postgreSQL.
+
+## Settings
+
+  To run locally
+
+  Install dependencies
+
+   ```shell
+   $ npm install
+   ```
+  After Setting up the database, navigate into `scoutbase-coding-backend-challenge/back-end` then Start server by running:
+
+   ```shell
+   $ npm run dev
+   ```
+  Seed Database tables with movies and some users by running the command below, its advisable to run it more than once:
+
+   ```shell
+   $ npm run seed
+   ```
+
+   Test by running:
+   ```shell
+   $ npm run test
+   ```
+
 
 
 # Code Challenge for Scoutbase
