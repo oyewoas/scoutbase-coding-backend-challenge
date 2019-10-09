@@ -14,7 +14,7 @@ const directors = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false,
       }
-    });
+    }); 
     Directors.associate = (models) => {
         Directors.belongsToMany(models.Actors, { through: 'actors_directors' });
     };
