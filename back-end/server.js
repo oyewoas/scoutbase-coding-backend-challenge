@@ -8,6 +8,8 @@ import resolvers from './resolvers';
 import models from './models';
 import TokenVerify from './middlewares/authorization';
 
+const port = process.env.PORT || 3000;
+
 const server = new ApolloServer({
   introspection: true,
   playground: true,
@@ -62,4 +64,4 @@ server.applyMiddleware({ app });
 models.sequelize.authenticate();
 models.sequelize.sync();
  
-app.listen({ port: 4000 }, () => console.log(`🚀 Server ready at http://localhost:4000${server.graphqlPath}`));
+app.listen({ port }, () => console.log(`🚀 Server ready at http://localhost:${port}${server.graphqlPath}`));
