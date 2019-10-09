@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.com/oyewoas/scoutbase-coding-backend-challenge.svg?token=UhTLyPmC4FJFTsy9LJJ1&branch=develop)](https://travis-ci.com/oyewoas/scoutbase-coding-backend-challenge)
+[![Maintainability](https://api.codeclimate.com/v1/badges/eec3cfdc2df501237031/maintainability)](https://codeclimate.com/github/oyewoas/scoutbase-coding-backend-challenge/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/eec3cfdc2df501237031/test_coverage)](https://codeclimate.com/github/oyewoas/scoutbase-coding-backend-challenge/test_coverage)
+
+
 # Code Challenge for Scoutbase
 
 If you’re reading this, then you’ve applied for a position at Scoutbase.

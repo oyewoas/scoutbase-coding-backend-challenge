@@ -1,6 +1,11 @@
 import axios from 'axios';
+import app from '../server';
 
-const API_URL = 'http://localhost:4000/graphql';
+app;
+
+const port = process.env.PORT || 3000;
+
+const API_URL = `http://localhost:${port}/graphql`;
 
 export const login = async (variables) => axios.post(API_URL, {
   query: `
