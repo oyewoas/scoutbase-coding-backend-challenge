@@ -6,7 +6,7 @@ const {
 const typeDefs = gql`
     scalar DateTime
     
-    type UserData {
+    type AuthPayload {
         token: String,
         user: User
     }
@@ -37,8 +37,8 @@ const typeDefs = gql`
         movies: [Movie]
     }
     type Mutation {        
-        createUser(username: String, password: String): UserData
-        login(username: String, password: String): UserData
+        createUser(username: String, password: String): AuthPayload
+        login(username: String, password: String): AuthPayload
     }
 `;
 
