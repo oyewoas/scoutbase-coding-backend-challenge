@@ -110,7 +110,7 @@
 
 ## Settings
 
-  To run locally
+  To run locally, clone repository `https://github.com/oyewoas/scoutbase-coding-backend-challenge.git`, cd into `scoutbase-coding-backend-challenge`
 
   Install dependencies
 
@@ -122,7 +122,7 @@
    ```shell
    $ npm run dev
    ```
-  Seed Database tables with movies and some users by running the command below, its advisable to run it more than once:
+  Seed Database tables with movies, directors, actors and some users by running the command below
 
    ```shell
    $ npm run seed
