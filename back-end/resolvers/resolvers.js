@@ -1,16 +1,14 @@
 
-import { combineResolvers } from 'graphql-resolvers';
 import { UsersController } from '../controllers';
 import MoviesController from '../controllers/movies';
-import isAuthenicated from './authorization';
 
 const { createUser, login } = UsersController;
 const { getMovies } = MoviesController;
 
 const resolvers = {
   Query: {
-    movies: async (root, args, { models }) => {
-      const movies = await getMovies(isAuthenicated, models);
+    movies: async (root, args, { models, currentUser }) => {
+      const movies = await getMovies(currentUser, models);
       return movies;
     },
   },

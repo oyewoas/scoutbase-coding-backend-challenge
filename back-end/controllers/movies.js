@@ -24,8 +24,6 @@ export default class MoviesController {
   static async getMovies(authenticatedUser, models) {
     const isLoggedIn = isUserLoggedIn(authenticatedUser);
     const movies = await models.Movies.findAll();
-
-
     if (!movies) {
       throw new UserInputError(
         'No Movie was found',
