@@ -4,8 +4,12 @@
   "description": "Scoutbase backend challeng NodeJs and GraphQL",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/server.js",
+    "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha back-end/test/index.test --timeout 10000 --require @babel/register --recursive --exit || true",
+    "coverage": "nyc report --reporter=text-lcov --reporter=lcov",
     "dev": "cross-env NODE_ENV=development nodemon --exec babel-node ./back-end/server.js",
     "seed": "node_modules/.bin/sequelize db:seed:all",
     "undo-seed": "node_modules/.bin/sequelize db:seed:undo:all"
