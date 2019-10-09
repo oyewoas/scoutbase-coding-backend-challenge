@@ -14,7 +14,7 @@ const users = (sequelize, DataTypes) => {
       allowNull: false,
       validate: {
         notEmpty: true,
-        len: [7, 42],
+        len: [7],
       },
     }
   });

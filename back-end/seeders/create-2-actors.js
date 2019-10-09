@@ -1,0 +1,36 @@
+import faker from 'faker'
+
+export default {
+  up: (queryInterface) => queryInterface.bulkInsert(
+    'Actors',
+    [
+      {
+        id: 1,
+        name: faker.internet.userName(),
+        birthday: faker.date.past(),
+        country: faker.address.country(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: 2,
+        name: faker.internet.userName(),
+        birthday: faker.date.past(),
+        country: faker.address.country(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+      {
+        id: 3,
+        name: faker.internet.userName(),
+        birthday: faker.date.past(),
+        country: faker.address.country(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },
+    ],
+    {}
+  ),
+  
+  down: (queryInterface) => queryInterface.bulkDelete('Actors', null, {})
+};
