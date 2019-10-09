@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s",
+    "build-babel": "babel -d ./build ./back-end -s",
     "build": "npm run clean && npm run build-babel",
     "start": "npm run build && node ./build/server.js",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha back-end/test/index.test --timeout 10000 --require @babel/register --recursive --exit || true",
