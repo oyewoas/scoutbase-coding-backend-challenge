@@ -36,7 +36,7 @@ describe('users', () => {
       result.should.have.property('data').property('data').property('login').eql(null);
     });
     it('returns a response with wrong credentials', async () => {
-      const result = await userApi.login({ username: 'fhdsfjafsdf', password: 'password' });
+      const result = await userApi.login({ username: 'sdfasdfdefef', password: 'password' });
       result.should.have.property('data').property('errors');
       result.should.have.property('data').property('data').property('login').eql(null);
     });
